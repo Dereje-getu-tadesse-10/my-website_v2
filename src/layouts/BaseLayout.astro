@@ -1,0 +1,54 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { slide } from 'astro:transitions';
+import {format, parseISO} from "date-fns";
+import {fr} from "date-fns/locale";
+const {frontmatter} = Astro.props;
+const {title, description, url, date} = frontmatter
+---
+
+<html>
+  <head>
+    <title>
+      {title}
+    </title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+    
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/icon.ico" />
+    <script async src="https://analytics.umami.is/script.js" data-website-id="d76e4153-562f-4dcc-b239-d346dfe85bb8"></script>
+    <ViewTransitions />
+  </head>
+    <main class="px-4 prose mx-w-none mx-auto prose-headings:text-rose-500 md:prose-headings:text-3xl prose-a:text-rose-600 prose-img:rounded-md prose-img:shadow-lg prose-img:mx-auto prose-strong:text-rose-600" transition:animate={slide({ duration: '0.4s' })}>
+    <div class="mb-12">
+      <Header/>
+    </div>
+      
+      <h1>{title}</h1>
+        <p>
+          Dereje Getu Tadesse | <time date-time={date} class="text-neutral-600">
+            {format(parseISO(date), 'd LLLL yyyy', { locale: fr })}
+           </time>
+        </p>
+      <hr/>
+      <slot /> 
+    <div class="mt-12">
+    <Footer/>
+    </div>
+    </main>
+ 
+</html>

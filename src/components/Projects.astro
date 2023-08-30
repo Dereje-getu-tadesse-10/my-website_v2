@@ -1,0 +1,48 @@
+---
+export type Project = {
+    name: string;
+    description: string;
+    view?: string;
+}
+
+const projects:Project[] = [
+    {
+        name: "Application Point relais",
+        description: `Gestion de l'UI et de l'authentification via l'API interne.`,
+        view:"https://relais.qru.pet/",
+    },
+    {
+        name: "QRU mon compte",
+        description: `Authentification, gestion des animaux et intégration Stripe dans une app e-commerce.`,
+        view:"https://moncompte.qru.pet/home",
+    },
+    {
+        name: "Boilerplate SvelteKit",
+        description:`Boilerplate de mon blog KS, déployé via Cloudflare Workers.`,
+        view:"https://svelte-mdx-blog.dereje.workers.dev/",
+    },
+    {
+        name: "Pan-lib",
+        description:`Un package npm créé pour le fun, contenant des fonctions utilitaires comme 'truncate'. (Projet archivé)`,
+        view:"https://www.npmjs.com/package/pan-lib",
+    },
+]
+---
+
+<div class="my-12">
+    <h3 class={"text-rose-500"}>
+        Projets
+    </h3>
+    <div class={"grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3"}>
+    {projects.map((p)=>(
+        <div class={"flex flex-col"}>
+        <a href={p.view} class={"text-underline-300 underline decoration-neutral-300 underline-offset-4 focus:decoration-rose-400 focus:outline-offset-6 hover:text-rose-500 transition-colors"} target={"_blank"}>
+            <span>{p.name}</span>
+        </a>
+        <span class={"block pt-2"}>
+            {p.description}
+        </span>
+        </div>
+    ))}
+    </div>
+</div>

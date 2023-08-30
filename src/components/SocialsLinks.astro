@@ -1,0 +1,37 @@
+---
+const socials = [
+  {
+    name: 'Github',
+    link: '/',
+  },
+  {
+    name: 'Linkedin',
+    link: '/',
+  },
+]
+---
+<ul class={'text-sm flex gap-2'} aria-label="Liens vers mes profils sociaux">
+      {socials.map((s) => (
+        <li role="listitem">
+          <a
+            class={
+              'flex gap-2 items-center justify-center hover:text-rose-500 hover:underline transition-colors text-neutral-800'
+            }
+            href={s.link}
+            target={'_blank'}
+            rel="noopener noreferrer"
+            aria-label={`Visitez mon profil ${s.name}`}
+            title={`Visitez mon profil ${s.name}`}
+          >
+            {s.name}
+          </a>
+        </li>
+      ))}
+      <li>
+        <a
+        href="/mentions-legales"
+        class="flex gap-2 items-center justify-center hover:text-rose-500 hover:underline transition-colors text-neutral-800">
+        Mentions légales
+        </a>
+      </li>
+</ul>
