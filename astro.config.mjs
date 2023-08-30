@@ -1,27 +1,26 @@
-import { defineConfig } from 'astro/config'
-import mdx from '@astrojs/mdx'
-import remarkToc from 'remark-toc'
-import tailwind from '@astrojs/tailwind'
-import cloudflare from '@astrojs/cloudflare'
+import { defineConfig } from 'astro/config';
+import mdx from '@astrojs/mdx';
+import remarkToc from 'remark-toc';
+import tailwind from '@astrojs/tailwind';
+import cloudflare from '@astrojs/cloudflare';
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
-  integrations: [
-    mdx({
-      syntaxHighlight: 'shiki',
-      shikiConfig: {
-        theme: 'dracula',
-      },
-      remarkPlugins: [remarkToc],
-      remarkRehype: {
-        footnoteLabel: 'Footnotes',
-      },
-      gfm: false,
-    }),
-    tailwind(),
-  ],
+  integrations: [mdx({
+    syntaxHighlight: 'shiki',
+    shikiConfig: {
+      theme: 'dracula'
+    },
+    remarkPlugins: [remarkToc],
+    remarkRehype: {
+      footnoteLabel: 'Footnotes'
+    },
+    gfm: false
+  }), tailwind()],
   experimental: {
-    viewTransitions: true,
+    viewTransitions: true
   },
   output: 'server',
-  adapter: cloudflare(),
-})
+  adapter: vercel()
+});

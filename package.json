@@ -13,10 +13,12 @@
     "@astrojs/cloudflare": "^7.0.0",
     "@astrojs/mdx": "^1.0.0",
     "@astrojs/tailwind": "^5.0.0",
+    "@astrojs/vercel": "^4.0.0",
     "@tailwindcss/typography": "^0.5.9",
     "astro": "^2.10.14",
     "date-fns": "^2.30.0",
     "remark-toc": "^8.0.1",
+    "serverless": "link:@astrojs/vercel/serverless",
     "tailwindcss": "^3.0.24"
   }
 }
