@@ -25,5 +25,5 @@ export default defineConfig({
     viewTransitions: true,
   },
   output: 'server',
-  adapter: cloudflare({ functionPerRoute: true }),
+  adapter: cloudflare(),
 })
