@@ -23,6 +23,9 @@ dependencies:
   date-fns:
     specifier: ^2.30.0
     version: registry.npmjs.org/date-fns@2.30.0
+  edge-functions:
+    specifier: link:@astrojs/netlify/edge-functions
+    version: link:@astrojs/netlify/edge-functions
   remark-toc:
     specifier: ^8.0.1
     version: registry.npmjs.org/remark-toc@8.0.1

@@ -3,7 +3,7 @@ import mdx from '@astrojs/mdx';
 import remarkToc from 'remark-toc';
 import tailwind from '@astrojs/tailwind';
 
-import netlify from "@astrojs/netlify/functions";
+import netlify from '@astrojs/netlify/edge-functions';
 
 // https://astro.build/config
 export default defineConfig({
