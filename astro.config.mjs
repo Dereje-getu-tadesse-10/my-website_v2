@@ -2,8 +2,8 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import remarkToc from 'remark-toc';
 import tailwind from '@astrojs/tailwind';
-import cloudflare from '@astrojs/cloudflare';
-import vercel from "@astrojs/vercel/serverless";
+
+import netlify from "@astrojs/netlify/functions";
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,5 +22,5 @@ export default defineConfig({
     viewTransitions: true
   },
   output: 'server',
-  adapter: vercel()
+  adapter: netlify()
 });
