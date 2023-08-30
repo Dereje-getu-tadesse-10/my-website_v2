@@ -24,6 +24,5 @@ export default defineConfig({
   experimental: {
     viewTransitions: true,
   },
-  output: 'server',
-  adapter: cloudflare(),
+  adapter: cloudflare({ mode: 'directory' }),
 })
