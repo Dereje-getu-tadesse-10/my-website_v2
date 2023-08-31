@@ -1,5 +1,5 @@
 ---
-const posts = await Astro.glob('../pages/post/*.md');
+const posts = await Astro.glob('../pages/post/*.mdx');
 const nonDraftPosts = posts.filter((post) => !post.frontmatter.draft);
 ---
 
@@ -13,7 +13,6 @@ const nonDraftPosts = posts.filter((post) => !post.frontmatter.draft);
                 <a href={p.url} class="text-underline-300 text-neutral-800 underline decoration-neutral-300 underline-offset-4 focus:decoration-rose-400 focus:outline-offset-6 hover:text-rose-500 transition-colors">
                    <span>{p.frontmatter.title}</span>
                 </a> 
-            
             </div>
         )
     })} 

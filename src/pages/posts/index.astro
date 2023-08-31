@@ -1,5 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import {format, parseISO} from "date-fns";
+import {fr} from "date-fns/locale";
 import Header from '../../components/Header.astro';
 import Footer from '../../components/Footer.astro';
 const posts = await Astro.glob('../../pages/post/*.md');
@@ -25,7 +27,7 @@ export const truncate = (txt: string | undefined, min: number) => {
                     {p.frontmatter.title}
                     </a>
                     <p class={"m-0 text-sm text-neutral-600"}>{truncate(p.frontmatter.description, 100)}</p>
-                   
+               
                 </div>
             </div>
             )

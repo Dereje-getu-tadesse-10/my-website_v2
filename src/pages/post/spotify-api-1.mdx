@@ -2,7 +2,8 @@
 layout: ../../layouts/BaseLayout.astro
 title: Obtenir le Morceau Actuel depuis l'API Spotify
 description: Apprends comment utiliser l'API de Spotify pour récupérer le morceau actuellement en lecture sur ton compte. Ce guide te montrera étape par étape comment interagir avec l'API de Spotify pour obtenir des informations sur la chanson que tu écoutes actuellement, y compris le titre et l'artiste
-date: 2023-08-28
+date: '2023-08-28'
+draft: false
 ---
 
 Apprends comment utiliser l'API de Spotify pour récupérer le morceau actuellement en lecture sur ton compte. Ce guide te montrera étape par étape comment interagir avec l'API de Spotify pour obtenir des informations sur la chanson que tu écoutes actuellement, y compris le titre et l'artiste.
@@ -43,8 +44,8 @@ Tu auras juste à récupérer le **refresh_token**.
 
 Tu devrais normalement avoir 2 clés :
 
-- **SPOTIFY_BASE_64**: la base 64 de ta clé client_id et client_secret
-- **SPOTIFY_REFRESH_TOKEN**: le refresh token que tu as récupéré juste avant
+- **SPOTIFY_BASE_64: la base 64 de ta clé client_id et client_secret**
+- **SPOTIFY_REFRESH_TOKEN: le refresh token que tu as récupéré juste avant**
 
 ### Récaputilatifs
 
@@ -66,8 +67,7 @@ pnpm create hono@latest le_nom_du_projet
 ```
 
 On te demandera ensuite quel template tu souhaites utiliser. Assure-toi de sélectionner cloudflare-workers.
-![terminal](https://res.cloudinary.com/decneq2aj/image/upload/v1693327585/Capture_d_e%CC%81cran_2023-08-29_a%CC%80_18.45.02_curtil.png)
-
+![terminal](https://res.cloudinary.com/decneq2aj/image/upload/c_fill,h_300,w_500/Capture_d_e%CC%81cran_2023-08-29_a%CC%80_18.45.02_curtil.png)
 Puis, ouvre le fichier wrangler.toml et modifie-le comme ceci :
 
 ```
@@ -152,7 +152,6 @@ app.use(
       'https://www.dereje.cyou',
       'http://localhost:5173',
       'http://localhost:3000',
-      // autre sites...
     ],
     allowHeaders: ['Content-Type', 'Access-Control-Allow-Origin'],
     allowMethods: ['GET'],
