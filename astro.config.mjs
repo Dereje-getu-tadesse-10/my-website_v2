@@ -2,7 +2,6 @@ import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import remarkToc from 'remark-toc';
 import tailwind from '@astrojs/tailwind';
-import svelte from '@astrojs/svelte';
 import partytown from "@astrojs/partytown";
 
 import react from "@astrojs/react";
