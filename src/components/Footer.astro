@@ -1,12 +1,12 @@
 ---
-import SocialsLinks from "./SocialsLinks.astro";
-import SpotifyCurrentSong from "./SpotifyCurrentSong.astro";
+import SocialsLinks from "./Socials.astro";
+import Spotify from "./Spotify/Spotify";
 const currentYear = ()=>{
     return new Date().getFullYear()
 }
 ---
 
-<footer class={"flex flex-col justify-center items-center gap-7 mt-10 not-prose"} role="contentinfo">
+<footer class={"flex flex-col justify-center items-center gap-7 mt-10 not-prose py-4"} role="contentinfo">
     <h2 class="sr-only">Informations du pied de page</h2>
     <a href={"/"}
           aria-label={"Lien de retour à l'accueil"}
@@ -18,6 +18,6 @@ const currentYear = ()=>{
         </svg>
 </a>
     <SocialsLinks/>
-    <SpotifyCurrentSong/>
-    <p class={"text-sm text-neutral-400"}>© {currentYear()} Dereje Getu Tadesse</p>
+    <Spotify client:load/>
+    <p class={"text-sm text-neutral-500"}>© {currentYear()} Dereje Getu Tadesse</p>
 </footer>

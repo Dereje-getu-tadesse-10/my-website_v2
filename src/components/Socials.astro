@@ -2,34 +2,34 @@
 const socials = [
   {
     name: 'Github',
-    link: '/',
+    link: 'https://github.com/Dereje-getu-tadesse-10',
   },
   {
     name: 'Linkedin',
-    link: '/',
+    link: 'https://www.linkedin.com/in/dereje-getu-tadesse-1158a9214/',
   },
 ]
 ---
 <ul class={'text-sm flex gap-2'} aria-label="Liens vers mes profils sociaux">
-      {socials.map((s) => (
+      {socials.map((social) => (
         <li role="listitem">
           <a
             class={
               'flex gap-2 items-center justify-center hover:text-rose-500 hover:underline transition-colors text-neutral-800'
             }
-            href={s.link}
+            href={social.link}
             target={'_blank'}
             rel="noopener noreferrer"
-            aria-label={`Visitez mon profil ${s.name}`}
-            title={`Visitez mon profil ${s.name}`}
+            aria-label={`Visitez mon profil ${social.name}`}
+            title={`Visitez mon profil ${social.name}`}
           >
-            {s.name}
+            {social.name}
           </a>
         </li>
       ))}
       <li>
         <a
-        href="/mentions-legales"
+        href="/mentions"
         class="flex gap-2 items-center justify-center hover:text-rose-500 hover:underline transition-colors text-neutral-800">
         Mentions légales
         </a>

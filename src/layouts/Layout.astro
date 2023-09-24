@@ -1,6 +1,6 @@
 --- 
 import { ViewTransitions } from 'astro:transitions';
-import { slide } from 'astro:transitions';
+import { fade} from 'astro:transitions';
 interface Props {
 	title: string;
 	description:string;
@@ -24,23 +24,22 @@ const { title, description, url } = Astro.props;
 		  <meta property="og:url" content={url} />
 		  <meta property="og:title" content={title} />
 		  <meta property="og:description" content={description} />
-		  <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
 		  
 		  <meta property="twitter:card" content="summary_large_image" />
 		  <meta property="twitter:url" content={url} />
 		  <meta property="twitter:title" content={title} />
 		  <meta property="twitter:description" content={description} />
-		  <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
 			  <meta name="viewport" content="width=device-width" />
 			  <link rel="icon" type="image/svg+xml" href="/icon.ico" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/x-icon" href="/icon.ico" />
-		<script async src="https://analytics.umami.is/script.js" data-website-id="d76e4153-562f-4dcc-b239-d346dfe85bb8"></script>
+		<script type="text/partytown" async src="https://analytics.umami.is/script.js" data-website-id="d76e4153-562f-4dcc-b239-d346dfe85bb8"></script>
 		<ViewTransitions  />
 	</head>
-	<body class="px-4 prose mx-w-none mx-auto" transition:animate={slide({ duration: '0.4s' })}>
-		<slot />
-		  <!-- <PageTransition speed={500} zIndex={99} /> -->
+	<body class="px-4 prose mx-w-none mx-auto" >
+		<main class="max-w-3xl mx-auto">
+			<slot />
+		</main>
 	</body>
 </html>
 
