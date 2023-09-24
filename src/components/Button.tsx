@@ -8,7 +8,7 @@ const Button = () => {
     const words = [
         "Contactez-moi",
         "저에게 연락하세요",
-        "Contact Me"
+        "Contact me"
     ];
 
 
