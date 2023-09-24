@@ -1,6 +1,9 @@
 # build output
 dist/
 
+# idea
+.idea/
+
 # generated types
 .astro/
 
