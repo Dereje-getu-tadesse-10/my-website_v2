@@ -20,7 +20,7 @@ const Button = () => {
             setTimeout(() => {
                 setIsTransitioning(false);
                 setIndex((prevIndex) => (prevIndex + 1) % words.length);
-            }, 500);
+            }, 350);
         }, 2500);
 
         return () => {
