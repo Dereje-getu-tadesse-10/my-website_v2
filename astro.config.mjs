@@ -16,5 +16,5 @@ export default defineConfig({
     },
     remarkPlugins: [remarkToc],
     gfm: false
-  }), tailwind(), svelte(), partytown(), react(),]
+  }), tailwind(), partytown(), react()]
 });
