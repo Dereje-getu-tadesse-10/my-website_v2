@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useState, useEffect } from 'preact/hooks';
 import { Play } from "./Play.ts.tsx";
 import { NotPlay } from "./NotPlay.tsx";
 

@@ -1,5 +1,4 @@
 import { truncate } from "../../lib/truncate.ts";
-import React from "react";
 
 type Play = {
     song_url: string;

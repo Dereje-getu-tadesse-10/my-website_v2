@@ -3,9 +3,9 @@ import mdx from '@astrojs/mdx';
 import remarkToc from 'remark-toc';
 import tailwind from '@astrojs/tailwind';
 import partytown from "@astrojs/partytown";
-import react from "@astrojs/react";
-
 import sitemap from "@astrojs/sitemap";
+
+import preact from "@astrojs/preact";
 
 // https://astro.build/config
 export default defineConfig({
@@ -16,6 +16,6 @@ export default defineConfig({
       theme: 'dracula'
     },
     remarkPlugins: [remarkToc],
-    gfm: false,
-  }), tailwind(), partytown(), react(), sitemap()]
+    gfm: false
+  }), tailwind(), partytown(), sitemap(), preact()]
 });
