@@ -36,7 +36,7 @@ const projects:Project[] = [
     <div class={"grid grid-cols-1 sm:grid-cols-2 gap-4 md:grid-cols-3"}>
     {projects.map((p)=>(
         <div class={"flex flex-col"}>
-        <a href={p.view} class={"text-underline-300 underline decoration-neutral-300 underline-offset-4 focus:decoration-rose-400 focus:outline-offset-6 hover:text-rose-500 transition-colors"} target={"_blank"}>
+        <a href={p.view} class={"text-underline-300 underline decoration-neutral-300 underline-offset-4 focus:decoration-rose-400 focus:outline-offset-6 hover:text-rose-500 transition-colors"} rel="noreferrer" target={"_blank"}>
             <span>{p.name}</span>
         </a>
         <span class={"block pt-2"}>
