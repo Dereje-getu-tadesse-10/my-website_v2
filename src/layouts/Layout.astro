@@ -43,3 +43,45 @@ const { title, description, url } = Astro.props;
 </html>
 
 
+<style is:global>
+	.scrolling-text-container {
+		position: relative;
+		height: 30px;
+		overflow: hidden;
+		display: inline-block;
+		text-decoration: none !important;
+		color: #e11d48 !important;
+	}
+
+	.scrolling-text {
+		display: flex;
+		flex-direction: column;
+		animation: scroll-up 7s linear infinite;
+		will-change: transform;
+	}
+
+	.scrolling-text div {
+		height: 30px;
+	}
+
+	@keyframes scroll-up {
+		0% {
+			transform: translateY(0);
+		}
+		100% {
+			transform: translateY(-50%);
+		}
+	}
+
+	.fade-effect {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(to top, white 0%, transparent 20%, transparent 80%, white 100%);
+	}
+
+</style>
+
+
